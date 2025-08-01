@@ -1,0 +1,24 @@
+{
+  "addons": [
+    "scheduler"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "description": "for fun",
+  "env": {
+    "TEST": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "name": "my-test-project",
+  "scripts": {
+    "postdeploy": "bin/setup",
+    "pr-predestroy": "bin/teardown"
+  },
+  "stack": "heroku-24"
+}
